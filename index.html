@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PH 203</title> 
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                                           
+    <link rel="stylesheet" href="css/templatemo-style.css">  
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <style type="text/css">
+        button:hover {
+            cursor: pointer!important;
+        }
+    </style>      
+      </head>
+      <body>
+        <div class="tm-main-content" id="top" style="background-color: #41464f">
+                <div class="container ">
+                    <div class="row text-white ">
+                        <nav class="navbar navbar-expand-lg navbar-dark sticky-top ">
+                            <div>
+                                <a class="navbar-brand mr-auto" href="#">
+                                Vaccum Science<br>and Technology
+                                </a>
+                            </div>                            
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#Nav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="fa fa-chevron-down "></span>
+                            </button>
+                            <div id="Nav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" href="#top">Home<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#tm-main-content1">Jump to main content</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#tm-section-4">About Us</a>
+                                </li>
+                            </ul>
+                        </div>                            
+                    </nav>
+                </div> 
+            </div> 
+        
+
+        <div class="tm-page-wrap mx-auto" id="tm-main-content1" style="background-color: #889bb8">
+            <div class="text-center p-4">
+                <button class="btn btn-info active m-2 button-gas" onclick="return active_gas()">Gas Equation</button>
+                <button class="btn btn-info m-2 button-suction"  onclick="return active_suction()">Suction Chamber</button>
+            </div>
+            
+            <div class="tm-container-outer" id="section-1">
+
+                <h2 style="padding-top: 30px; text-align: center;"><span class="p-1" >Gas Equation</span></h2>
+                <div class="row tm-banner-row text-center" id="tm-section-search" style="padding-top: 20px!important;">
+
+                    <form action="index.html" method="get" class="tm-search-form tm-section-pad-2 dialogG"  style="border-radius:10px; box-shadow: 5px 10px 10px 10px grey; background-color: #cad3e0">
+                        <h4 style="color: black; font-weight:bold;">Please enter the Values:</h4>
+                        <br>
+                        <div class="form-row">                              
+                            <div class="form-group col-6">
+                                <label >Moles Of Gas<strong class="text-danger">*</strong></label>
+                                <input name="destination" type="number" class="form-control"  placeholder="No. of Moles">
+                            </div>
+
+                            <div class="form-group col-6">
+                                <label >Pressure<strong class="text-danger">*</strong></label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in Pa)">
+                            </div>                           
+                            
+                        </div>
+                        <div class="form-row">
+
+                            <div class="form-group col-6">
+                                <label >Temperature<strong class="text-danger">*</strong></label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in K)">
+                            </div>
+                            <div class="form-group col-6">
+                                <label >Time<strong class="text-danger">*</strong></label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in S)">
+                            </div>
+                            <div class="form-group col-6 offset-3">
+                                <button  class="btn btn-info tm-btn tm-btn-search number-uppercase" type="button" onclick="return gas_equation()" >Calculate</button>
+                            </div>
+                        </div> 
+					<div class="final finalG">
+					<br>
+					<div style="text-align: left;">
+					<div style="font-size: 14px;font-weight: bold;">
+							<p>Through put (Q)  :<span class="g1" style="color: black; font-size: 16px;font-weight: lighter;" >NA</span></p>
+							<p>Pumping Speed  :<span class="g2" style="color: black; font-size: 16px;font-weight: lighter;"  >NA</span></p>
+					</div>
+					</div>
+                    <br>
+					</div>                        
+                    </form>                             
+                </div>
+            </div>        
+            <div class="tm-container-outer d-none" id="section-2">
+                <h2 style="padding-top: 30px; text-align: center;" ><span class="p-1" >Suction Chamber</span></h2>
+
+                <div class="row tm-banner-row text-center" id="tm-section-search" style="padding-top: 20px!important;">
+
+                    <form action="index.html" method="get" class="tm-search-form tm-section-pad-2 dialogS" style="border-radius:10px; box-shadow: 5px 10px 10px 10px grey; background-color: #cad3e0 ">
+                        <h4 style="color: black;  font-weight:bold;">Enter the Values:</h4>
+                        <br>
+                        <div class="form-row">                                
+                            <div class="form-group col-4">
+                                <label >Rotational Speed</label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in rpm)">
+                            </div>
+
+                            <div class="form-group col-4">
+                                <label >Input Pressure</label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in Pa)">
+                            </div> 
+                            <div class="form-group col-4">
+                                <label >Output Pressure</label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in Pa)">
+                            </div>                            
+                            
+                        </div>
+                        <div class="form-row">
+
+                            <div class="form-group col-6">
+                                <label >Dead Space Volume </label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in m^3)">
+                            </div>
+                            <div class="form-group col-6">
+                                <label >Suction Chamber Volume </label>
+                                <input name="destination" type="number" class="form-control"  placeholder="(in m^3)">
+                            </div>
+                            <div class="form-group col-6 offset-3">
+                                <label ></label>
+                                <button class="btn btn-primary tm-btn tm-btn-search number-uppercase" type="button" onclick="suction_chamber()" >Calculate</button>
+                            </div>
+                        </div> 
+					<div class="final finalS">
+
+					<br>
+					<div style="text-align: left;">
+					<div style="font-size: 14px;font-weight: bold;">
+							<p>Through put (Q)  :<span class="g1" style="color: black; font-size: 16px;font-weight: lighter;" >NA</span></p>
+							<p>Pumping Speed  :<span class="g2" style="color: black; font-size: 16px;font-weight: lighter;"  >NA</span></p>
+					</div>
+					</div>
+                    <br>
+					</div>                       
+                    </form> 
+                </div>
+
+            </div>
+            <br><br><br><br>
+
+            <div class="tm-container-outer tm-position-relative" id="tm-section-4">
+    
+
+            </div>
+            <footer class="tm-container-outer text-white " style="background-color: #41464f">
+                
+                <div class="footer_col  text-center">
+                    <div class="footer_title" style=" font-size: 30px;padding-left: 20px;"  >About Us</div>
+                    <br>
+                    <div style="font-size: 15px;font-weight: bold;">
+                        Name: Shivam Singh Kushwah<br>
+                        Roll No.:  1901EE55
+                    </div>
+                    <br>
+
+                    <div style="font-size: 15px;font-weight: bold;">
+                        Name: Utkarsh Pathak <br>
+                        Roll No.:  1901EE69
+                    </div>
+                </div>
+
+
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>             
+    <script src="js/popper.min.js"></script>                   
+    <script src="js/bootstrap.min.js"></script>                 
+    <script src="js/jquery.singlePageNav.min.js"></script>      
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script> 
+
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function(){
+
+            // Change top navbar on scroll
+            $(window).on("scroll", function() {
+                if($(window).scrollTop() > 100) {
+                    $(".tm-top-bar").addClass("active");
+                } else {                    
+                 $(".tm-top-bar").removeClass("active");
+                }
+            });
+
+            // Smooth scroll to search form
+            $('.tm-down-arrow-link').click(function(){
+                $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+            });
+
+            // Date Picker in Search form
+           
+
+            // Update nav links on scroll
+            $('#tm-top-bar').singlePageNav({
+                currentClass:'active',
+                offset: 60
+            });
+
+            // Close navbar after clicked
+            $('.nav-link').click(function(){
+                $('#Nav').removeClass('show');
+                console.log("here");
+            });
+        }); 
+
+
+        //main functions
+
+        //function for gas equation
+        ///here, input[0] = Moles of gas,input[1] = Pressure,input[2] = Temperature,input[3] = Time
+
+            
+            const active_gas = () => {
+                if($("#section-1").hasClass("d-none"))
+                {
+                    $("#section-1").removeClass('d-none');
+                    $("#section-2").addClass('d-none');
+                    $(".button-suction").removeClass('active');
+                    $(".button-gas").addClass('active');
+                }
+            }
+            const active_suction = () => {
+                if($("#section-2").hasClass("d-none"))
+                {
+                    $("#section-2").removeClass('d-none');
+                    $("#section-1").addClass('d-none');
+                    $(".button-gas").removeClass('active');
+                    $(".button-suction").addClass('active');
+                }
+            }
+
+            var dialogG = document.querySelector('.dialogG')
+
+            function gas_equation(){
+            try{
+            var inputs = dialogG.querySelectorAll('input');
+            if(inputs[1].value == 0) throw "Pressure can't be zero";
+            if(inputs[3].value == 0) throw "Time can't be zero";
+            var Q = (inputs[0].value*8.314*inputs[2].value)/inputs[3].value;
+            var S = Q/inputs[1].value;
+            dialogG.querySelector('.g1').textContent = Q.toFixed(2) +" W";
+            dialogG.querySelector('.g2').textContent = S.toFixed(2) +" m3/s";
+            }
+            catch(err){
+            MessageChannel.innerHTML = "Invalid Input:" + err;
+            window.alert("Invalid Input: "+err);
+            }
+            }
+
+
+        //function for suction Chamber
+
+        ///here,     input[0] = ROTATIONAL SPEED,input[1] = Input Pressure,input[2] = Output Pressure,input[3] = Dead Space Volume,input[4] = Suction Chamber Volume
+
+
+            var dialogS = document.querySelector('.dialogS')
+
+            function suction_chamber(){
+            try{
+                var inputs = dialogS.querySelectorAll('input');													
+                if(inputs[1].value == 0) throw "Input Pressure can't be zero";												
+                var Q = inputs[0].value*(inputs[4].value*inputs[1].value-inputs[3].value*inputs[2].value)
+                var S = Q/inputs[1].value
+                console.log(Q);                                                                                     
+                dialogS.querySelector('.g1').textContent = Q.toFixed(2)+" W";
+                dialogS.querySelector('.g2').textContent = S.toFixed(2)+" m3/s";
+                
+            }
+            catch(err){
+                MessageChannel.innerHTML = "Invalid Input:" + err;
+                window.alert("Invalid Input: "+err);
+            }
+            }
+
+            
+
+    </script>             
+
+</body>
+</html>
